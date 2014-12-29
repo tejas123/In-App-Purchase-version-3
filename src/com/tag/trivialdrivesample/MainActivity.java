@@ -494,15 +494,4 @@ public class MainActivity extends Activity {
         mTank = sp.getInt("tank", 2);
         Log.d(TAG, "Loaded data: tank = " + String.valueOf(mTank));
     }
-    
-    
-    @Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (mHelper != null
-				&& !mHelper.handleActivityResult(requestCode, resultCode, data)) {
-			// not handled, so handle it ourselves (here's where you'd
-			// perform any handling of activity results not related to in-app
-			// billing...
-			super.onActivityResult(requestCode, resultCode, data);
-		} 
 }
